@@ -16,9 +16,10 @@
             position: relative;
             top: 5%;
             left: 10%;
-            width: 50%;
+            width: 390px;
             text-align: center;
             overflow: auto;
+            font-size: 1.5rem;
         }
     }
     .sobremi{
@@ -28,7 +29,85 @@
         img {
             width: 350px;
             margin-left: 10%;
-        
+            border-radius: 25%;
         }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header{
+        #top{
+            padding: 5%;
+            .logo{
+                justify-content: space-between;
+            }
+        }
+        .menu{
+            padding: 2px 2px;
+            font-size: 4px;
+            a{
+                padding: 1px 1px;
+                font-size: 0.5rem;
+            }
+    }    
+}
+.container{
+    justify-content: space-between;
+    height: 410px;
+    flex-direction: column;
+    width: 320px;
+    .sobremi-description{
+        width: 320px;
+        float: none;
+        height: 320px;
+        .sobre {
+            display: none;
+        }
+    }
+    .sobremi{
+        float: none;
+        width: 80%;
+        img {
+            width: 315px;
+            margin: 5px 5px 0px 0px;
+            border-radius: 25%;
+            height: 400px;
+        }
+    }
+}
+
+.foot{
+    position: absolute;
+    justify-content: space-around;
+    font-size: 10px;
+    padding: 10px;
+    .chiara{
+        color: black;
+        text-decoration: none;
+        .logoInsta{
+            width: 25px;
+            padding: 0;
+        }
+    }
+    .telefono{
+        color: black;
+        text-decoration: none;
+        .logoTel{
+            width: 25px;
+            padding: 0;
+        }
+    }
+    .derechos{
+        color: black;
+        font-size: 10px;
+    }
+    .bottonup{
+        color: #000;
+        text-decoration: none;  
+        font-size: 10px;
+    }
+    .iraltop{
+        font-size: 10px;
+    }
     }
 }

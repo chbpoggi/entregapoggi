@@ -15,7 +15,7 @@
     font-family: "AlumniSansPinstripe-Regular";
     src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
 } */
-@font-face {
+/* @font-face {
     font-family: "Inconsolata-VariableFont";
     src: url(../fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
@@ -23,18 +23,18 @@
 @font-face {
     font-family: "Open Sans";
     src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5 {
     text-transform: uppercase;
     text-align: center;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -43,20 +43,20 @@ label,
 p,
 button {
     font-family: "Open Sans";
-}
+} */
 
-input::placeholder {
+/* input::placeholder {
     font-family: "Open Sans";
-}
+} */
 /* 
 .top {
     text-align: center;
     padding-bottom: 25px;
 } */
 
-p {
+/* p {
     font-family: "Open Sans";
-}
+} */
 
 /* .padre {  
     display: grid;

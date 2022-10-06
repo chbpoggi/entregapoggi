@@ -9,6 +9,25 @@ $white: #ffffff;
 @import "proyectos";
 @import "servicios";
 
+@font-face {
+    font-family: "Inconsolata-VariableFont";
+    src: url(../fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -262,7 +281,7 @@ footer{
             
         }
         .slogan{
-            width: 200%;
+            width: 100%;
             .center{
                 margin: 0 auto;
                 width: 315px;

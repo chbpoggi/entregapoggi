@@ -2,7 +2,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: 50%;
   margin: 0 auto;
   padding-top: 20px; }
   .contact-form label {
@@ -20,27 +20,68 @@
     background-color: white;
     box-shadow: 1px 1px 1px 1px #CCC; }
 
+footer {
+  position: relative;
+  justify-content: space-between;
+  font-size: 10px;
+  padding: 10px; }
+  footer .chiara {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-size: 0.8rem; }
+    footer .chiara .logoInsta {
+      width: 10px;
+      padding: 0; }
+  footer .telefono {
+    color: black;
+    text-decoration: none;
+    font-size: 0.8rem; }
+    footer .telefono .logoTel {
+      width: 20px;
+      padding: 0; }
+  footer .derechos {
+    color: black;
+    font-size: 0.8rem; }
+  footer .bottonup {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8rem; }
+
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 30px; }
-  .gallery img {
-    flex-basis: 25%;
-    width: 25%; }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  gap: 10px;
+  padding: 20px; }
+  .gallery .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    border: none 1px; }
+    .gallery .grid-item :hover {
+      filter: opacity(0.9);
+      transform: scale(1.04); }
+    .gallery .grid-item img {
+      width: 400px;
+      height: 600px;
+      margin: 0px; }
 
 @media screen and (max-width: 320px) {
   .padre1 {
     grid-template-columns: 1.5fr;
     grid-template-rows: 0.5fr;
     grid-auto-flow: row;
-    grid-template-areas: "header" "main" "section" "footer"; }
+    grid-template-areas: "header" "main" "footer"; }
     .padre1 .header #top {
       padding: 5%; }
       .padre1 .header #top .logo {
         width: 100px;
         padding: 10px;
-        margin: 2px 0px 0px 90px;
+        margin: 0px 0px 0px 90px;
         justify-content: space-between; }
     .padre1 .header .menu {
       padding: 2px 2px;
@@ -48,18 +89,42 @@
       .padre1 .header .menu a {
         padding: 1px 1px;
         font-size: 0.5rem; }
-    .padre1 .slogan {
-      width: 200%; }
-      .padre1 .slogan .center {
-        margin: 0 auto;
-        width: 315px; }
-    .padre1 .sobre {
-      font-weight: bolder;
-      margin: 0;
-      text-align: center;
-      overflow: auto; }
-    .padre1 .slogan {
-      font-size: 1rem; } }
+    .padre1 .gallery {
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 5px;
+      width: 100%;
+      height: 100%; }
+      .padre1 .gallery .grid-item {
+        border-radius: 4px;
+        border: none 1px;
+        width: 90%; }
+        .padre1 .gallery .grid-item img {
+          width: 330px;
+          height: 100%;
+          margin: 0px; }
+    .padre1 footer {
+      position: relative;
+      justify-content: space-between;
+      font-size: 10px;
+      padding: 10px; }
+      .padre1 footer .chiara {
+        color: black;
+        text-decoration: none; }
+        .padre1 footer .chiara .logoInsta {
+          width: 25px;
+          padding: 0; }
+      .padre1 footer .telefono {
+        color: black;
+        text-decoration: none; }
+        .padre1 footer .telefono .logoTel {
+          width: 25px;
+          padding: 0; }
+      .padre1 footer .derechos {
+        color: black; }
+      .padre1 footer .bottonup {
+        color: #000;
+        text-decoration: none; } }
 
 .container {
   display: flex;
@@ -79,20 +144,158 @@
       position: relative;
       top: 5%;
       left: 10%;
-      width: 50%;
+      width: 390px;
       text-align: center;
-      overflow: auto; }
+      overflow: auto;
+      font-size: 1.5rem; }
   .container .sobremi {
     padding-bottom: 200px;
     float: left;
     width: 50%; }
     .container .sobremi img {
       width: 350px;
-      margin-left: 10%; }
+      margin-left: 10%;
+      border-radius: 25%; }
+
+@media screen and (max-width: 320px) {
+  .header #top {
+    padding: 5%; }
+    .header #top .logo {
+      justify-content: space-between; }
+  .header .menu {
+    padding: 2px 2px;
+    font-size: 4px; }
+    .header .menu a {
+      padding: 1px 1px;
+      font-size: 0.5rem; }
+  .container {
+    justify-content: space-between;
+    height: 410px;
+    flex-direction: column;
+    width: 320px; }
+    .container .sobremi-description {
+      width: 320px;
+      float: none;
+      height: 320px; }
+      .container .sobremi-description .sobre {
+        display: none; }
+    .container .sobremi {
+      float: none;
+      width: 80%; }
+      .container .sobremi img {
+        width: 315px;
+        margin: 5px 5px 0px 0px;
+        border-radius: 25%;
+        height: 400px; }
+  .foot {
+    position: absolute;
+    justify-content: space-around;
+    font-size: 10px;
+    padding: 10px; }
+    .foot .chiara {
+      color: black;
+      text-decoration: none; }
+      .foot .chiara .logoInsta {
+        width: 25px;
+        padding: 0; }
+    .foot .telefono {
+      color: black;
+      text-decoration: none; }
+      .foot .telefono .logoTel {
+        width: 25px;
+        padding: 0; }
+    .foot .derechos {
+      color: black;
+      font-size: 10px; }
+    .foot .bottonup {
+      color: #000;
+      text-decoration: none;
+      font-size: 10px; }
+    .foot .iraltop {
+      font-size: 10px; } }
+
+.titulo {
+  font-family: "Open Sans" bolder;
+  font-size: 1.5rem; }
+
+.subtitulo {
+  font-family: "Open Sans" bolder;
+  font-size: 1.2rem; }
 
 .grilla {
   padding: 5%;
-  margin: 0%; }
+  margin: 0%;
+  font-size: "Open Sans"; }
+
+@media screen and (max-width: 320px) {
+  .header #top {
+    padding: 5%; }
+    .header #top .logo {
+      width: 100px;
+      padding: 10px;
+      margin: 0px 0px 0px 90px;
+      justify-content: space-between; }
+  .header .menu {
+    padding: 2px 2px;
+    font-size: 4px; }
+    .header .menu a {
+      padding: 1px 1px;
+      font-size: 0.5rem; }
+  .grilla {
+    padding: 4px;
+    width: 100%; }
+    .grilla .row {
+      font-size: 0.6rem; }
+      .grilla .row .col-6 {
+        width: 50%;
+        height: 100%; }
+        .grilla .row .col-6 h2 {
+          font-size: 1rem; }
+  .foot {
+    position: relative;
+    justify-content: space-around;
+    font-size: 10px;
+    padding: 10px;
+    font-family: "Open Sans" bolder; }
+    .foot .chiara {
+      color: black;
+      text-decoration: none; }
+      .foot .chiara .logoInsta {
+        width: 25px;
+        padding: 0; }
+    .foot .telefono {
+      color: black;
+      text-decoration: none; }
+      .foot .telefono .logoTel {
+        width: 25px;
+        padding: 0; }
+    .foot .derechos {
+      color: black;
+      font-size: 10px; }
+    .foot .bottonup {
+      color: #000;
+      text-decoration: none;
+      font-size: 10px;
+      font-family: "Open Sans"; }
+    .foot .iraltop {
+      font-size: 10px;
+      font-family: "Open Sans"; } }
+
+@font-face {
+  font-family: "Inconsolata-VariableFont";
+  src: url(../fonts/Inconsolata-VariableFont_wdth\,wght.ttf); }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf); }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+  text-align: center; }
 
 * {
   padding: 0px;
@@ -322,7 +525,7 @@ footer {
         padding: 1px 1px;
         font-size: 0.5rem; }
     .padre .slogan {
-      width: 200%; }
+      width: 100%; }
       .padre .slogan .center {
         margin: 0 auto;
         width: 315px; }
