@@ -83,37 +83,15 @@ body {
         padding: 0 25px;
         text-transform: uppercase;
         font-style: none;
-            &:hover a{
+            &:hover {
                 color: #c89b67;
                 background-color: #f0f8ff;
                 transition: all .3s ease 0s;
             }
-
-    }
-    .submenu{
-        position: absolute;
-        display: none;
-        background-color: $white;
-        padding: 5px;
-        z-index: 999;
-        box-shadow: 0px 1px 5px 2px rgb(238, 238, 238);
-        
-        .sub_i{
-            display: block; 
-            font-size: 1rem;
-
-            padding: 2px 0;
-            width: 200px;
-            
-            a{
-                font-size: 11px; 
-                display: block;
-                color: #053762; 
             }
-        }
+            }
 
-    }
-}
+    
 main{
     grid-area: main;
     display: flex;
@@ -188,67 +166,6 @@ footer{
         text-decoration: none;  
     }
 }
-/* @media screen and (max-width: 768px) {
-    .padre {  
-        grid-template-columns: 1.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-auto-flow: row;
-        grid-template-areas: 
-        "header"
-        "main"
-        "section"
-        "footer";
-
-            .header{
-                .logo {
-                    width: 100px;
-                    padding: 10px;
-                    margin: 5px 10px 15px 30px;
-                    justify-content: center;
-                }
-            }
-        
-    }
-    
-    
-    .menu .item{
-        padding: 0px 0px;
-        font-size: 0.5rem;
-        
-    }
-
-    .gallery {
-        padding: 10px 10px 10px 10px;
-    }
-    .tamañoTexto{
-        font-size: 1rem;
-    }
-    
-}
-@media screen and (max-width: 425px) {
-    .padre {  
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-auto-flow: row;
-        grid-template-areas: 
-        "header"
-        "main"
-        "section"
-        "footer"
-    }
-    .logo {
-        width: 100%;
-    }
-    
-
-    
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    } */
     @media screen and (max-width: 320px) {
         .padre {  
             grid-template-columns: 1.5fr;
@@ -297,16 +214,6 @@ footer{
         .slogan{
             font-size: 1rem;
         }
-       /*  .menu .item a{
-            padding: 0px 0px 25px 25px;
-            font-size: 200%;
-            justify-content: space-around;
-        } */
-      /*   .sevilla{
-            width: 90%;
-            margin: auto;
-        } */
-        
         
         footer{
         
@@ -338,16 +245,6 @@ footer{
                 text-decoration: none;  
             }
         }
-        /* footer {
-            width: auto;
-            height: 15%;
-            footer div ul li {
-                font-size: 5%;
-            }
-            .derechos{
-                font-size: ;
-            }
-        } */
     
 
         .galeTitulo{

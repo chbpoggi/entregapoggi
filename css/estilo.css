@@ -53,7 +53,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: minmax(200px, auto);
   gap: 10px;
-  padding: 20px; }
+  padding: 8px; }
   .gallery .grid-item {
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ footer {
       filter: opacity(0.9);
       transform: scale(1.04); }
     .gallery .grid-item img {
-      width: 400px;
+      width: 390px;
       height: 600px;
       margin: 0px; }
 
@@ -93,16 +93,17 @@ footer {
       grid-template-columns: 1fr;
       gap: 2px;
       padding: 5px;
-      width: 100%;
+      max-width: 90%;
+      /* width: 100%; */
       height: 100%; }
       .padre1 .gallery .grid-item {
-        border-radius: 4px;
-        border: none 1px;
+        border: none;
         width: 90%; }
         .padre1 .gallery .grid-item img {
-          width: 330px;
-          height: 100%;
-          margin: 0px; }
+          width: 290px;
+          height: 95%;
+          margin: 0px;
+          border-radius: 10px; }
     .padre1 footer {
       position: relative;
       justify-content: space-between;
@@ -214,72 +215,76 @@ footer {
     .foot .iraltop {
       font-size: 10px; } }
 
-.titulo {
-  font-family: "Open Sans" bolder;
-  font-size: 1.5rem; }
-
-.subtitulo {
-  font-family: "Open Sans" bolder;
-  font-size: 1.2rem; }
-
-.grilla {
-  padding: 5%;
-  margin: 0%;
-  font-size: "Open Sans"; }
-
-@media screen and (max-width: 320px) {
-  .header #top {
-    padding: 5%; }
-    .header #top .logo {
-      width: 100px;
+body {
+  font-family: "Open Sans"; }
+  body .titulo {
+    font-family: "Open Sans" bolder;
+    font-size: 1.5rem; }
+  body .subtitulo {
+    font-family: "Open Sans" bolder;
+    font-size: 1.2rem; }
+  body .grilla {
+    padding: 5%;
+    margin: 0%;
+    font-size: "Open Sans"; }
+    body .grilla .row {
+      padding: 0px;
+      margin: 0px; }
+    body .grilla .col-6 {
+      padding: 10px; }
+  @media screen and (max-width: 320px) {
+    body .header #top {
+      padding: 5%; }
+      body .header #top .logo {
+        width: 100px;
+        padding: 10px;
+        margin: 0px 0px 0px 90px;
+        justify-content: space-between; }
+    body .header .menu {
+      padding: 2px 2px;
+      font-size: 4px; }
+      body .header .menu a {
+        padding: 1px 1px;
+        font-size: 0.5rem; }
+    body .grilla {
+      padding: 4px;
+      width: 100%; }
+      body .grilla .row {
+        font-size: 0.6rem; }
+        body .grilla .row .col-6 {
+          width: 50%;
+          height: 100%; }
+          body .grilla .row .col-6 h2 {
+            font-size: 1rem; }
+    body .foot {
+      position: relative;
+      justify-content: space-around;
+      font-size: 10px;
       padding: 10px;
-      margin: 0px 0px 0px 90px;
-      justify-content: space-between; }
-  .header .menu {
-    padding: 2px 2px;
-    font-size: 4px; }
-    .header .menu a {
-      padding: 1px 1px;
-      font-size: 0.5rem; }
-  .grilla {
-    padding: 4px;
-    width: 100%; }
-    .grilla .row {
-      font-size: 0.6rem; }
-      .grilla .row .col-6 {
-        width: 50%;
-        height: 100%; }
-        .grilla .row .col-6 h2 {
-          font-size: 1rem; }
-  .foot {
-    position: relative;
-    justify-content: space-around;
-    font-size: 10px;
-    padding: 10px;
-    font-family: "Open Sans" bolder; }
-    .foot .chiara {
-      color: black;
-      text-decoration: none; }
-      .foot .chiara .logoInsta {
-        width: 25px;
-        padding: 0; }
-    .foot .telefono {
-      color: black;
-      text-decoration: none; }
-      .foot .telefono .logoTel {
-        width: 25px;
-        padding: 0; }
-    .foot .derechos {
-      color: black;
-      font-size: 10px; }
-    .foot .bottonup {
-      color: #000;
-      text-decoration: none;
-      font-size: 10px;
-      font-family: "Open Sans"; }
-    .foot .iraltop {
-      font-size: 10px;
-      font-family: "Open Sans"; } }
+      font-family: "Open Sans" bolder; }
+      body .foot .chiara {
+        color: black;
+        text-decoration: none; }
+        body .foot .chiara .logoInsta {
+          width: 25px;
+          padding: 0; }
+      body .foot .telefono {
+        color: black;
+        text-decoration: none; }
+        body .foot .telefono .logoTel {
+          width: 25px;
+          padding: 0; }
+      body .foot .derechos {
+        color: black;
+        font-size: 10px; }
+      body .foot .bottonup {
+        color: #000;
+        text-decoration: none;
+        font-size: 10px;
+        font-family: "Open Sans"; }
+      body .foot .iraltop {
+        font-size: 10px;
+        font-family: "Open Sans"; } }
 
 @font-face {
   font-family: "Inconsolata-VariableFont";
@@ -346,26 +351,10 @@ nav {
     padding: 0 25px;
     text-transform: uppercase;
     font-style: none; }
-    .menu .item:hover a {
+    .menu .item:hover {
       color: #c89b67;
       background-color: #f0f8ff;
       transition: all .3s ease 0s; }
-  .menu .submenu {
-    position: absolute;
-    display: none;
-    background-color: #ffffff;
-    padding: 5px;
-    z-index: 999;
-    box-shadow: 0px 1px 5px 2px #eeeeee; }
-    .menu .submenu .sub_i {
-      display: block;
-      font-size: 1rem;
-      padding: 2px 0;
-      width: 200px; }
-      .menu .submenu .sub_i a {
-        font-size: 11px;
-        display: block;
-        color: #053762; }
 
 main {
   grid-area: main;
@@ -425,92 +414,12 @@ footer {
     color: #000;
     text-decoration: none; }
 
-/* @media screen and (max-width: 768px) {
-    .padre {  
-        grid-template-columns: 1.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-auto-flow: row;
-        grid-template-areas: 
-        "header"
-        "main"
-        "section"
-        "footer";
-
-            .header{
-                .logo {
-                    width: 100px;
-                    padding: 10px;
-                    margin: 5px 10px 15px 30px;
-                    justify-content: center;
-                }
-            }
-        
-    }
-    
-    
-    .menu .item{
-        padding: 0px 0px;
-        font-size: 0.5rem;
-        
-    }
-
-    .gallery {
-        padding: 10px 10px 10px 10px;
-    }
-    .tamañoTexto{
-        font-size: 1rem;
-    }
-    
-}
-@media screen and (max-width: 425px) {
-    .padre {  
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-auto-flow: row;
-        grid-template-areas: 
-        "header"
-        "main"
-        "section"
-        "footer"
-    }
-    .logo {
-        width: 100%;
-    }
-    
-
-    
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    } */
 @media screen and (max-width: 320px) {
   .padre {
     grid-template-columns: 1.5fr;
     grid-template-rows: 0.5fr;
     grid-auto-flow: row;
-    grid-template-areas: "header" "main" "section" "footer";
-    /*  .menu .item a{
-            padding: 0px 0px 25px 25px;
-            font-size: 200%;
-            justify-content: space-around;
-        } */
-    /*   .sevilla{
-            width: 90%;
-            margin: auto;
-        } */
-    /* footer {
-            width: auto;
-            height: 15%;
-            footer div ul li {
-                font-size: 5%;
-            }
-            .derechos{
-                font-size: ;
-            }
-        } */ }
+    grid-template-areas: "header" "main" "section" "footer"; }
     .padre .header #top {
       padding: 5%; }
       .padre .header #top .logo {
